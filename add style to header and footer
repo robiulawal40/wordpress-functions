@@ -1,0 +1,23 @@
+function style_add_footer() {
+?>
+<style>
+.tooltip {
+	background: #FFFBCF;
+	border: 1px solid #EFE795;
+	}
+	
+.tooltip>span { 
+			background: #FFFBCF;
+			border-top: 1px solid #EFE795;
+			border-right: 1px solid #EFE795;
+               }
+.wiki_span{
+   color:;
+}			   
+.tooltip a{
+    color:;
+	}
+</style>
+<?php
+}
+add_action('wp_footer', 'style_add_footer');
