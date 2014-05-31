@@ -1,0 +1,19 @@
+// wordpress defold color picker activator
+add_action( 'admin_enqueue_scripts', 'bsc_enqueue_color_picker' );
+	function bsc_enqueue_color_picker( $hooksuffix ) {  
+	             wp_enqueue_style( 'wp-color-picker' );
+                 wp_enqueue_script( 'wp-color-picker' ); 
+	                                                  }
+add_action('admin_footer', 'colorpicker');
+function colorpicker() {
+	echo "	
+    <script type='text/javascript'>
+	jQuery(document).ready(function($){
+	    $('.bsc_color').wpColorPicker();
+	     
+	    //add more field here
+	    $('.bsc_bg_color').wpColorPicker();
+	});
+	</script>
+	";
+                }
